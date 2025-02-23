@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Direct Download</string>
+    <string name="choose_file_type">Choose file type</string>
+    <string name="write_your_query">Write your query</string>
+    <string name="choose_engine">Choose engine</string>
+    <string name="search">Search</string>
+
+
+    <string-array name="file_types">
+        <item>VIDEO</item>
+        <item>EBOOK</item>
+        <item>AUDIO</item>
+        <item>SOFTWARE</item>
+        <item>IMAGE</item>
+        <item>GENERAL</item>
+    </string-array>
+
+    <string-array name="engine_types">
+        <item>GOOGLE</item>
+    </string-array>
+</resources>

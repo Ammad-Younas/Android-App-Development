@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F44336"
+            android:fitsSystemWindows="true" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/queryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_bg_for_edittext"
+        android:hint="@string/write_your_query"
+        android:inputType="text"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/fileTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/choose_file_type"
+        app:layout_constraintStart_toStartOf="@+id/queryTextView"
+        app:layout_constraintTop_toBottomOf="@+id/queryTextView" />
+
+    <Spinner
+        android:id="@+id/fileType"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/file_types"
+        app:layout_constraintStart_toStartOf="@+id/fileTypeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/fileTypeTextView" />
+
+    <TextView
+        android:id="@+id/engineTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:text="@string/choose_engine"
+        app:layout_constraintBottom_toBottomOf="@+id/fileTypeTextView"
+        app:layout_constraintStart_toEndOf="@+id/fileTypeTextView"
+        app:layout_constraintTop_toTopOf="@+id/fileTypeTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/engineType"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="@+id/fileType"
+        app:layout_constraintBottom_toBottomOf="@+id/fileType"
+        app:layout_constraintStart_toStartOf="@+id/engineTypeTextView"
+        android:entries="@array/engine_types"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_bg_for_button"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/engineType"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fileType"
+        app:layout_constraintTop_toBottomOf="@+id/fileType" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
