@@ -10,6 +10,6 @@ This repository contains various practice projects created during my learning jo
 - **`With_XML/`**
   - Contains all practice projects developed using XML-based layouts in Android.
 
-- **`With_Jetpack_Compose/`**
+- **`Jetpack_Compose/`**
   - Contains all practice projects created with Jetpack Compose.
   - This folder will be updated with more projects as I continue learning.
